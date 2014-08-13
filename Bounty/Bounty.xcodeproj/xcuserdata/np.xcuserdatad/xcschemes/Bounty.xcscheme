@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ECF20F0F199AE787004F0416"
+               BlueprintIdentifier = "EC1BF45B199B2130009BD2F4"
                BuildableName = "Bounty.app"
                BlueprintName = "Bounty"
                ReferencedContainer = "container:Bounty.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ECF20F30199AE787004F0416"
+               BlueprintIdentifier = "EC1BF47C199B2130009BD2F4"
                BuildableName = "BountyTests.xctest"
                BlueprintName = "BountyTests"
                ReferencedContainer = "container:Bounty.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "ECF20F0F199AE787004F0416"
+            BlueprintIdentifier = "EC1BF45B199B2130009BD2F4"
             BuildableName = "Bounty.app"
             BlueprintName = "Bounty"
             ReferencedContainer = "container:Bounty.xcodeproj">
@@ -61,7 +61,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "ECF20F0F199AE787004F0416"
+            BlueprintIdentifier = "EC1BF45B199B2130009BD2F4"
             BuildableName = "Bounty.app"
             BlueprintName = "Bounty"
             ReferencedContainer = "container:Bounty.xcodeproj">
@@ -79,7 +79,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "ECF20F0F199AE787004F0416"
+            BlueprintIdentifier = "EC1BF45B199B2130009BD2F4"
             BuildableName = "Bounty.app"
             BlueprintName = "Bounty"
             ReferencedContainer = "container:Bounty.xcodeproj">
