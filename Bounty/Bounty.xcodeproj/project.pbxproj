@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ECF20F14199AE787004F0416 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF20F13199AE787004F0416 /* Foundation.framework */; };
+		ECF20F16199AE787004F0416 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF20F15199AE787004F0416 /* CoreGraphics.framework */; };
+		ECF20F18199AE787004F0416 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF20F17199AE787004F0416 /* UIKit.framework */; };
+		ECF20F1E199AE787004F0416 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECF20F1C199AE787004F0416 /* InfoPlist.strings */; };
+		ECF20F20199AE787004F0416 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF20F1F199AE787004F0416 /* main.m */; };
+		ECF20F24199AE787004F0416 /* BTYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF20F23199AE787004F0416 /* BTYAppDelegate.m */; };
+		ECF20F27199AE787004F0416 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECF20F25199AE787004F0416 /* Main.storyboard */; };
+		ECF20F2A199AE787004F0416 /* BTYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF20F29199AE787004F0416 /* BTYViewController.m */; };
+		ECF20F2C199AE787004F0416 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECF20F2B199AE787004F0416 /* Images.xcassets */; };
+		ECF20F33199AE787004F0416 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF20F32199AE787004F0416 /* XCTest.framework */; };
+		ECF20F34199AE787004F0416 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF20F13199AE787004F0416 /* Foundation.framework */; };
+		ECF20F35199AE787004F0416 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF20F17199AE787004F0416 /* UIKit.framework */; };
+		ECF20F3D199AE787004F0416 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECF20F3B199AE787004F0416 /* InfoPlist.strings */; };
+		ECF20F3F199AE787004F0416 /* BountyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF20F3E199AE787004F0416 /* BountyTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ECF20F36199AE787004F0416 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECF20F08199AE787004F0416 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECF20F0F199AE787004F0416;
+			remoteInfo = Bounty;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ECF20F10199AE787004F0416 /* Bounty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bounty.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECF20F13199AE787004F0416 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ECF20F15199AE787004F0416 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		ECF20F17199AE787004F0416 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		ECF20F1B199AE787004F0416 /* Bounty-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Bounty-Info.plist"; sourceTree = "<group>"; };
+		ECF20F1D199AE787004F0416 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ECF20F1F199AE787004F0416 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ECF20F21199AE787004F0416 /* Bounty-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bounty-Prefix.pch"; sourceTree = "<group>"; };
+		ECF20F22199AE787004F0416 /* BTYAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTYAppDelegate.h; sourceTree = "<group>"; };
+		ECF20F23199AE787004F0416 /* BTYAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTYAppDelegate.m; sourceTree = "<group>"; };
+		ECF20F26199AE787004F0416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ECF20F28199AE787004F0416 /* BTYViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTYViewController.h; sourceTree = "<group>"; };
+		ECF20F29199AE787004F0416 /* BTYViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTYViewController.m; sourceTree = "<group>"; };
+		ECF20F2B199AE787004F0416 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		ECF20F31199AE787004F0416 /* BountyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BountyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECF20F32199AE787004F0416 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		ECF20F3A199AE787004F0416 /* BountyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BountyTests-Info.plist"; sourceTree = "<group>"; };
+		ECF20F3C199AE787004F0416 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ECF20F3E199AE787004F0416 /* BountyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BountyTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ECF20F0D199AE787004F0416 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECF20F16199AE787004F0416 /* CoreGraphics.framework in Frameworks */,
+				ECF20F18199AE787004F0416 /* UIKit.framework in Frameworks */,
+				ECF20F14199AE787004F0416 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECF20F2E199AE787004F0416 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECF20F33199AE787004F0416 /* XCTest.framework in Frameworks */,
+				ECF20F35199AE787004F0416 /* UIKit.framework in Frameworks */,
+				ECF20F34199AE787004F0416 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ECF20F07199AE787004F0416 = {
+			isa = PBXGroup;
+			children = (
+				ECF20F19199AE787004F0416 /* Bounty */,
+				ECF20F38199AE787004F0416 /* BountyTests */,
+				ECF20F12199AE787004F0416 /* Frameworks */,
+				ECF20F11199AE787004F0416 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ECF20F11199AE787004F0416 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ECF20F10199AE787004F0416 /* Bounty.app */,
+				ECF20F31199AE787004F0416 /* BountyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ECF20F12199AE787004F0416 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECF20F13199AE787004F0416 /* Foundation.framework */,
+				ECF20F15199AE787004F0416 /* CoreGraphics.framework */,
+				ECF20F17199AE787004F0416 /* UIKit.framework */,
+				ECF20F32199AE787004F0416 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ECF20F19199AE787004F0416 /* Bounty */ = {
+			isa = PBXGroup;
+			children = (
+				ECF20F22199AE787004F0416 /* BTYAppDelegate.h */,
+				ECF20F23199AE787004F0416 /* BTYAppDelegate.m */,
+				ECF20F25199AE787004F0416 /* Main.storyboard */,
+				ECF20F28199AE787004F0416 /* BTYViewController.h */,
+				ECF20F29199AE787004F0416 /* BTYViewController.m */,
+				ECF20F2B199AE787004F0416 /* Images.xcassets */,
+				ECF20F1A199AE787004F0416 /* Supporting Files */,
+			);
+			path = Bounty;
+			sourceTree = "<group>";
+		};
+		ECF20F1A199AE787004F0416 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ECF20F1B199AE787004F0416 /* Bounty-Info.plist */,
+				ECF20F1C199AE787004F0416 /* InfoPlist.strings */,
+				ECF20F1F199AE787004F0416 /* main.m */,
+				ECF20F21199AE787004F0416 /* Bounty-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ECF20F38199AE787004F0416 /* BountyTests */ = {
+			isa = PBXGroup;
+			children = (
+				ECF20F3E199AE787004F0416 /* BountyTests.m */,
+				ECF20F39199AE787004F0416 /* Supporting Files */,
+			);
+			path = BountyTests;
+			sourceTree = "<group>";
+		};
+		ECF20F39199AE787004F0416 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ECF20F3A199AE787004F0416 /* BountyTests-Info.plist */,
+				ECF20F3B199AE787004F0416 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ECF20F0F199AE787004F0416 /* Bounty */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECF20F42199AE787004F0416 /* Build configuration list for PBXNativeTarget "Bounty" */;
+			buildPhases = (
+				ECF20F0C199AE787004F0416 /* Sources */,
+				ECF20F0D199AE787004F0416 /* Frameworks */,
+				ECF20F0E199AE787004F0416 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bounty;
+			productName = Bounty;
+			productReference = ECF20F10199AE787004F0416 /* Bounty.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ECF20F30199AE787004F0416 /* BountyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECF20F45199AE787004F0416 /* Build configuration list for PBXNativeTarget "BountyTests" */;
+			buildPhases = (
+				ECF20F2D199AE787004F0416 /* Sources */,
+				ECF20F2E199AE787004F0416 /* Frameworks */,
+				ECF20F2F199AE787004F0416 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECF20F37199AE787004F0416 /* PBXTargetDependency */,
+			);
+			name = BountyTests;
+			productName = BountyTests;
+			productReference = ECF20F31199AE787004F0416 /* BountyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ECF20F08199AE787004F0416 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BTY;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Nathan Pabrai";
+				TargetAttributes = {
+					ECF20F30199AE787004F0416 = {
+						TestTargetID = ECF20F0F199AE787004F0416;
+					};
+				};
+			};
+			buildConfigurationList = ECF20F0B199AE787004F0416 /* Build configuration list for PBXProject "Bounty" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ECF20F07199AE787004F0416;
+			productRefGroup = ECF20F11199AE787004F0416 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ECF20F0F199AE787004F0416 /* Bounty */,
+				ECF20F30199AE787004F0416 /* BountyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ECF20F0E199AE787004F0416 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECF20F2C199AE787004F0416 /* Images.xcassets in Resources */,
+				ECF20F1E199AE787004F0416 /* InfoPlist.strings in Resources */,
+				ECF20F27199AE787004F0416 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECF20F2F199AE787004F0416 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECF20F3D199AE787004F0416 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ECF20F0C199AE787004F0416 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECF20F2A199AE787004F0416 /* BTYViewController.m in Sources */,
+				ECF20F24199AE787004F0416 /* BTYAppDelegate.m in Sources */,
+				ECF20F20199AE787004F0416 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECF20F2D199AE787004F0416 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECF20F3F199AE787004F0416 /* BountyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ECF20F37199AE787004F0416 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECF20F0F199AE787004F0416 /* Bounty */;
+			targetProxy = ECF20F36199AE787004F0416 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ECF20F1C199AE787004F0416 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECF20F1D199AE787004F0416 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		ECF20F25199AE787004F0416 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECF20F26199AE787004F0416 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ECF20F3B199AE787004F0416 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECF20F3C199AE787004F0416 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ECF20F40199AE787004F0416 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ECF20F41199AE787004F0416 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ECF20F43199AE787004F0416 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bounty/Bounty-Prefix.pch";
+				INFOPLIST_FILE = "Bounty/Bounty-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		ECF20F44199AE787004F0416 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bounty/Bounty-Prefix.pch";
+				INFOPLIST_FILE = "Bounty/Bounty-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		ECF20F46199AE787004F0416 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Bounty.app/Bounty";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bounty/Bounty-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BountyTests/BountyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		ECF20F47199AE787004F0416 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Bounty.app/Bounty";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bounty/Bounty-Prefix.pch";
+				INFOPLIST_FILE = "BountyTests/BountyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ECF20F0B199AE787004F0416 /* Build configuration list for PBXProject "Bounty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECF20F40199AE787004F0416 /* Debug */,
+				ECF20F41199AE787004F0416 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECF20F42199AE787004F0416 /* Build configuration list for PBXNativeTarget "Bounty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECF20F43199AE787004F0416 /* Debug */,
+				ECF20F44199AE787004F0416 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ECF20F45199AE787004F0416 /* Build configuration list for PBXNativeTarget "BountyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECF20F46199AE787004F0416 /* Debug */,
+				ECF20F47199AE787004F0416 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ECF20F08199AE787004F0416 /* Project object */;
+}
