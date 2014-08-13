@@ -7,12 +7,19 @@
 //
 
 #import "BTYAppDelegate.h"
+#import <Parse/Parse.h>
 
 @implementation BTYAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [Parse setApplicationId:@"ukZxQfdR2fYZAvWNQLncGy9Ea3HnBRUFaqnhia15"
+                  clientKey:@"Bl90bEiDlwOI8rekmbGyG7ZgiI9uoZPS69tJA1Hi"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+   
+
+    
     return YES;
 }
 							

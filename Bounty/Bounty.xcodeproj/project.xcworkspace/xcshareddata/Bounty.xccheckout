@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>DC2D0CAA-6F1E-40D9-A5D6-407EEA0ED1C2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Bounty</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E028620E-FDE8-478B-AE38-176B932388EB</key>
+		<string>https://bitbucket.org/nathanpabrai/bounty-ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Bounty/Bounty.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E028620E-FDE8-478B-AE38-176B932388EB</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/nathanpabrai/bounty-ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E028620E-FDE8-478B-AE38-176B932388EB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E028620E-FDE8-478B-AE38-176B932388EB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>bounty-ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>
