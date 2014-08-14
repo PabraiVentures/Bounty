@@ -31,6 +31,7 @@
 		EC1BF4A3199B21CF009BD2F4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC1BF4A2199B21CF009BD2F4 /* Security.framework */; };
 		EC1BF4A5199B21D6009BD2F4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC1BF4A4199B21D6009BD2F4 /* StoreKit.framework */; };
 		EC1BF4A7199B21E0009BD2F4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC1BF4A6199B21E0009BD2F4 /* SystemConfiguration.framework */; };
+		EC1BF4AA199C317A009BD2F4 /* R2Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1BF4A9199C317A009BD2F4 /* R2Connection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		EC1BF4A2199B21CF009BD2F4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		EC1BF4A4199B21D6009BD2F4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		EC1BF4A6199B21E0009BD2F4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EC1BF4A8199C317A009BD2F4 /* R2Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = R2Connection.h; sourceTree = "<group>"; };
+		EC1BF4A9199C317A009BD2F4 /* R2Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = R2Connection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +160,7 @@
 				EC1BF471199B2130009BD2F4 /* Main.storyboard */,
 				EC1BF474199B2130009BD2F4 /* BTYViewController.h */,
 				EC1BF475199B2130009BD2F4 /* BTYViewController.m */,
+				EC1BF4AB199C31A5009BD2F4 /* R2 */,
 				EC1BF477199B2130009BD2F4 /* Images.xcassets */,
 				EC1BF466199B2130009BD2F4 /* Supporting Files */,
 			);
@@ -190,6 +194,15 @@
 				EC1BF487199B2130009BD2F4 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC1BF4AB199C31A5009BD2F4 /* R2 */ = {
+			isa = PBXGroup;
+			children = (
+				EC1BF4A8199C317A009BD2F4 /* R2Connection.h */,
+				EC1BF4A9199C317A009BD2F4 /* R2Connection.m */,
+			);
+			name = R2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC1BF476199B2130009BD2F4 /* BTYViewController.m in Sources */,
+				EC1BF4AA199C317A009BD2F4 /* R2Connection.m in Sources */,
 				EC1BF470199B2130009BD2F4 /* BTYAppDelegate.m in Sources */,
 				EC1BF46C199B2130009BD2F4 /* main.m in Sources */,
 			);
