@@ -10,7 +10,7 @@
 
 @implementation R2Connection
 -(BOOL) setupUserWithToken:(NSString *)token{
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://r2-env-znjehk5kjg.elasticbeanstalk.com/"]
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://r2-env-znjehk5kjg.elasticbeanstalk.com/setupUser"]
                                                            cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData
                                                        timeoutInterval:10];
     
