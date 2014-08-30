@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
-
-@interface BTYViewController : UIViewController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
-
+#import <GoogleMaps/GoogleMaps.h>
+@interface BTYViewController : UIViewController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, GMSMapViewDelegate>
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+-(void) loadMap;
 @end

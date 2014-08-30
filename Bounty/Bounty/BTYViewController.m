@@ -14,6 +14,9 @@
 @end
 
 @implementation BTYViewController
+{
+    GMSMapView *mapView;
+}
 
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -32,15 +35,39 @@
         
         // Present the log in view controller
         [self presentViewController:logInViewController animated:YES completion:NULL];
+        [self loadMap];
     }
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+- (IBAction)logoutAction:(id)sender {
+    [PFUser logOut];
+    [self viewDidAppear:false];
+}
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)loadMap{
+    // Create a GMSCameraPosition that tells the map to display the
+    // coordinate -33.86,151.20 at zoom level 6.
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-33.86
+                                                            longitude:151.20
+                                                                 zoom:6];
+    mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
+    mapView.myLocationEnabled = YES;
+    self.view=mapView;
+    // Creates a marker in the center of the map.
+    GMSMarker *marker = [[GMSMarker alloc] init];
+    marker.position = CLLocationCoordinate2DMake(-33.86, 151.20);
+    marker.title = @"Sydney";
+    marker.snippet = @"Australia";
+    marker.map = mapView;
+    
+
 }
 // Parse Login Protocol methods
 //User tries to login
@@ -60,7 +87,8 @@
 //User just logged in
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
     [self dismissViewControllerAnimated:YES completion:NULL]; //dismiss login view
-}
+    //[self loadMap];
+   }
 
 // Sent to the delegate when the log in attempt fails.
 - (void)logInViewController:(PFLogInViewController *)logInController didFailToLogInWithError:(NSError *)error {
@@ -103,6 +131,7 @@
     //send the session token to R2
     [[[R2Connection alloc] init] setupUserWithToken:user.sessionToken];
     [self dismissViewControllerAnimated:YES completion:NULL]; // Dismiss the PFSignUpViewController
+   //[self loadMap];
 }
 
 // Sent to the delegate when the sign up attempt fails.
