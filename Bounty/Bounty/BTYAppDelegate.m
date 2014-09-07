@@ -8,6 +8,7 @@
 
 #import "BTYAppDelegate.h"
 #import <Parse/Parse.h>
+#import <GoogleMaps/GoogleMaps.h>
 
 @implementation BTYAppDelegate
 
@@ -17,7 +18,7 @@
     [Parse setApplicationId:@"ukZxQfdR2fYZAvWNQLncGy9Ea3HnBRUFaqnhia15"
                   clientKey:@"Bl90bEiDlwOI8rekmbGyG7ZgiI9uoZPS69tJA1Hi"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-   
+    [GMSServices provideAPIKey:@"AIzaSyCec6WqiNWeIbHPfcptMls_kHrPrt_d3xg"];
 
     
     return YES;
