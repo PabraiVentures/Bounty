@@ -14,7 +14,7 @@
 		EC1BF46C199B2130009BD2F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1BF46B199B2130009BD2F4 /* main.m */; };
 		EC1BF470199B2130009BD2F4 /* BTYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1BF46F199B2130009BD2F4 /* BTYAppDelegate.m */; };
 		EC1BF473199B2130009BD2F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1BF471199B2130009BD2F4 /* Main.storyboard */; };
-		EC1BF476199B2130009BD2F4 /* BTYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1BF475199B2130009BD2F4 /* BTYViewController.m */; };
+		EC1BF476199B2130009BD2F4 /* BTYLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1BF475199B2130009BD2F4 /* BTYLoginViewController.m */; };
 		EC1BF478199B2130009BD2F4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC1BF477199B2130009BD2F4 /* Images.xcassets */; };
 		EC1BF47F199B2130009BD2F4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC1BF47E199B2130009BD2F4 /* XCTest.framework */; };
 		EC1BF480199B2130009BD2F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC1BF45F199B2130009BD2F4 /* Foundation.framework */; };
@@ -43,6 +43,9 @@
 		ECAEDF8F19B1772900A5221E /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAEDF8E19B1772800A5221E /* libicucore.dylib */; };
 		ECAEDF9119B1773900A5221E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAEDF9019B1773900A5221E /* OpenGLES.framework */; };
 		ECAEDF9319B17DBA00A5221E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAEDF9219B17DBA00A5221E /* FacebookSDK.framework */; };
+		ECAEDF9519BD138100A5221E /* moneyBag.png in Resources */ = {isa = PBXBuildFile; fileRef = ECAEDF9419BD138100A5221E /* moneyBag.png */; };
+		ECAEDF9719BD14B500A5221E /* money_bag_26.png in Resources */ = {isa = PBXBuildFile; fileRef = ECAEDF9619BD14B500A5221E /* money_bag_26.png */; };
+		ECAEDF9A19BD15F800A5221E /* BTYMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAEDF9919BD15F800A5221E /* BTYMapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,8 +70,8 @@
 		EC1BF46E199B2130009BD2F4 /* BTYAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTYAppDelegate.h; sourceTree = "<group>"; };
 		EC1BF46F199B2130009BD2F4 /* BTYAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTYAppDelegate.m; sourceTree = "<group>"; };
 		EC1BF472199B2130009BD2F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EC1BF474199B2130009BD2F4 /* BTYViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTYViewController.h; sourceTree = "<group>"; };
-		EC1BF475199B2130009BD2F4 /* BTYViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTYViewController.m; sourceTree = "<group>"; };
+		EC1BF474199B2130009BD2F4 /* BTYLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTYLoginViewController.h; sourceTree = "<group>"; };
+		EC1BF475199B2130009BD2F4 /* BTYLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTYLoginViewController.m; sourceTree = "<group>"; };
 		EC1BF477199B2130009BD2F4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EC1BF47D199B2130009BD2F4 /* BountyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BountyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC1BF47E199B2130009BD2F4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -98,6 +101,10 @@
 		ECAEDF8E19B1772800A5221E /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		ECAEDF9019B1773900A5221E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		ECAEDF9219B17DBA00A5221E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		ECAEDF9419BD138100A5221E /* moneyBag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moneyBag.png; sourceTree = "<group>"; };
+		ECAEDF9619BD14B500A5221E /* money_bag_26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = money_bag_26.png; sourceTree = "<group>"; };
+		ECAEDF9819BD15F800A5221E /* BTYMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTYMapViewController.h; sourceTree = "<group>"; };
+		ECAEDF9919BD15F800A5221E /* BTYMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTYMapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,8 +208,10 @@
 				EC1BF46E199B2130009BD2F4 /* BTYAppDelegate.h */,
 				EC1BF46F199B2130009BD2F4 /* BTYAppDelegate.m */,
 				EC1BF471199B2130009BD2F4 /* Main.storyboard */,
-				EC1BF474199B2130009BD2F4 /* BTYViewController.h */,
-				EC1BF475199B2130009BD2F4 /* BTYViewController.m */,
+				ECAEDF9819BD15F800A5221E /* BTYMapViewController.h */,
+				ECAEDF9919BD15F800A5221E /* BTYMapViewController.m */,
+				EC1BF474199B2130009BD2F4 /* BTYLoginViewController.h */,
+				EC1BF475199B2130009BD2F4 /* BTYLoginViewController.m */,
 				EC1BF4AB199C31A5009BD2F4 /* R2 */,
 				EC1BF477199B2130009BD2F4 /* Images.xcassets */,
 				EC1BF466199B2130009BD2F4 /* Supporting Files */,
@@ -213,6 +222,8 @@
 		EC1BF466199B2130009BD2F4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				ECAEDF9619BD14B500A5221E /* money_bag_26.png */,
+				ECAEDF9419BD138100A5221E /* moneyBag.png */,
 				EC1BF467199B2130009BD2F4 /* Bounty-Info.plist */,
 				EC1BF468199B2130009BD2F4 /* InfoPlist.strings */,
 				EC1BF46B199B2130009BD2F4 /* main.m */,
@@ -326,9 +337,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC1BF478199B2130009BD2F4 /* Images.xcassets in Resources */,
+				ECAEDF9519BD138100A5221E /* moneyBag.png in Resources */,
 				EC1BF46A199B2130009BD2F4 /* InfoPlist.strings in Resources */,
 				EC1BF473199B2130009BD2F4 /* Main.storyboard in Resources */,
 				ECAEDF8119B176CE00A5221E /* GoogleMaps.bundle in Resources */,
+				ECAEDF9719BD14B500A5221E /* money_bag_26.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,9 +360,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC1BF476199B2130009BD2F4 /* BTYViewController.m in Sources */,
+				EC1BF476199B2130009BD2F4 /* BTYLoginViewController.m in Sources */,
 				EC1BF4AA199C317A009BD2F4 /* R2Connection.m in Sources */,
 				EC1BF470199B2130009BD2F4 /* BTYAppDelegate.m in Sources */,
+				ECAEDF9A19BD15F800A5221E /* BTYMapViewController.m in Sources */,
 				EC1BF46C199B2130009BD2F4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
