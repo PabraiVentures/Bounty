@@ -17,6 +17,8 @@
     GMSMapView *mapView;
     CLLocationManager* locationManager;
     CLLocation* currentLocation;
+    UIView *bountyFormView;
+    UIButton *addBounty;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -32,10 +34,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self initializeLocationManager];
+
+}
+- (void)viewDidAppear:(BOOL)animated{
     [locationManager startUpdatingLocation];
 
 }
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -54,7 +58,7 @@
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithTarget:currentLocation.coordinate zoom:16.0];
     mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     mapView.myLocationEnabled = YES;
-    self.view=mapView;
+    self.view = mapView;
     // Creates a marker in the center of the map.
     UIImage* moneyBag = [UIImage imageNamed:@"money_bag_26"];
     GMSMarker *marker = [[GMSMarker alloc] init];
@@ -63,6 +67,15 @@
     marker.title = @"Your";
     marker.snippet = @"Australia";
     marker.map = mapView;
+    
+    addBounty = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [addBounty addTarget:self
+               action:@selector(createNewBounty)
+     forControlEvents:UIControlEventTouchUpInside];
+    [addBounty setTitle:@"Create Bounty" forState:UIControlStateNormal];
+    [addBounty setBackgroundColor: [UIColor whiteColor]];
+    addBounty.frame = CGRectMake(0.0, 16.0, 120.0, 20.0);
+    [mapView addSubview:addBounty];
     
     
 }
@@ -79,6 +92,27 @@
     currentLocation = [locations objectAtIndex:0];
     [locationManager stopUpdatingLocation];
     [self loadMap];
+}
+-(void)createNewBounty{
+    addBounty.enabled= false;
+    float width= self.view.frame.size.width;
+    float height= self.view.frame.size.height;
+    bountyFormView = [[UIView alloc]initWithFrame:CGRectMake(40, 40, width-80 , height - 80)];
+    [bountyFormView setBackgroundColor:[UIColor redColor]];
+    [mapView addSubview:bountyFormView];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [button addTarget:self
+               action:@selector(closeCreateNewBounty)
+     forControlEvents:UIControlEventTouchUpInside];
+    [button setTitle:@"Kill" forState:UIControlStateNormal];
+    [button setBackgroundColor: [UIColor whiteColor]];
+    button.frame = CGRectMake(70.0, 256.0, 120.0, 20.0);
+    [bountyFormView addSubview:button];
+    
+}
+-(void)closeCreateNewBounty{
+    [bountyFormView removeFromSuperview];
+    addBounty.enabled=true;
 }
 /*
 #pragma mark - Navigation
