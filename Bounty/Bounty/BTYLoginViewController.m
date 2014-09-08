@@ -106,6 +106,8 @@
     return informationComplete;
 }
 
+
+
 // Sent to the delegate when a PFUser is signed up.
 - (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
     //send the session token to R2

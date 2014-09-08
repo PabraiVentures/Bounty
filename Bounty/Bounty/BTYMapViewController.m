@@ -19,6 +19,12 @@
     CLLocation* currentLocation;
     UIView *bountyFormView;
     UIButton *addBounty;
+    UILabel *detailDefaultText;
+    UILabel *priceDefaultText;
+    UILabel *titleDefaultText;
+    UITextView *price;
+    UITextView *detail;
+    UITextView *title;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -33,6 +39,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
     [self initializeLocationManager];
 
 }
@@ -77,6 +84,8 @@
     addBounty.frame = CGRectMake(0.0, 16.0, 120.0, 20.0);
     [mapView addSubview:addBounty];
     
+   
+    
     
 }
 
@@ -97,10 +106,20 @@
     addBounty.enabled= false;
     float width= self.view.frame.size.width;
     float height= self.view.frame.size.height;
-    bountyFormView = [[UIView alloc]initWithFrame:CGRectMake(40, 40, width-80 , height - 80)];
-    [bountyFormView setBackgroundColor:[UIColor redColor]];
+    float margin = 20;
+    float spacing = 20;
+    bountyFormView = [[UIView alloc]initWithFrame:CGRectMake(margin, margin, width-(2*margin) , height - (2*margin))];
+    [bountyFormView setBackgroundColor:[UIColor whiteColor]];
+    bountyFormView.alpha = .90;
     [mapView addSubview:bountyFormView];
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    [tap setCancelsTouchesInView:NO];
+    [bountyFormView addGestureRecognizer:tap];
+    
+    /*UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [button addTarget:self
                action:@selector(closeCreateNewBounty)
      forControlEvents:UIControlEventTouchUpInside];
@@ -108,21 +127,122 @@
     [button setBackgroundColor: [UIColor whiteColor]];
     button.frame = CGRectMake(70.0, 256.0, 120.0, 20.0);
     [bountyFormView addSubview:button];
+     */
+    float formHeight = bountyFormView.frame.size.height;
+    float formWidth = bountyFormView.frame.size.width;
+    
+    //title for bounty at top
+    //---><---//
+    //\\\^//////
+    
+    title = [[UITextView alloc] initWithFrame:CGRectMake(margin+.5*spacing, 0,formWidth-(2*margin + spacing),2*spacing)];
+    title.font = [UIFont fontWithName:@"Helvetica Neue" size:22.0];
+    title.textAlignment = NSTextAlignmentCenter;
+    [bountyFormView addSubview:title];
+
+    titleDefaultText = [[UILabel alloc] initWithFrame:CGRectMake(margin+.5*spacing,0,formWidth-(2*margin + spacing),2*spacing)];
+    titleDefaultText.text = @"Name your Bounty";
+    titleDefaultText.font = [UIFont fontWithName:@"Helvetica Neue" size:22.0];
+    [title addSubview:titleDefaultText];
+
+    
+    UILabel *location = [[UILabel alloc] initWithFrame:CGRectMake(margin+.5*spacing, margin+spacing, formWidth-(2*margin + spacing), spacing)];
+    location.font= [UIFont fontWithName:@"Helvetica Neue" size:14.0];
+    location.text= @"Your Current Location";
+    location.textAlignment=NSTextAlignmentCenter;
+    [bountyFormView addSubview:location];
+    
+    UIButton *changeLocation = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [changeLocation addTarget:self action:@selector(changeBountyLocation) forControlEvents:UIControlEventTouchUpInside];
+    [changeLocation setTitle:@"Specify other location" forState:UIControlStateNormal];
+    changeLocation.titleLabel.font = [UIFont fontWithName:@"Helvetica Neue" size:14.0];
+    [changeLocation setBackgroundColor:[UIColor whiteColor]];
+    changeLocation.frame = CGRectMake(margin+.5*spacing, margin+2*spacing, formWidth-(2*margin + spacing), spacing);
+    [bountyFormView addSubview:changeLocation];
+ 
+    detail = [[UITextView alloc]initWithFrame:CGRectMake(margin+.5*spacing, margin+3*spacing, formWidth-(2*margin + spacing), 4*spacing)];
+    detail.delegate = self;
+    detail.editable = true;
+    [bountyFormView addSubview:detail];
+    
+    detailDefaultText = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, formWidth-(2*margin + spacing), spacing)];
+    detailDefaultText.text = @"What do you want done today?";
+    detailDefaultText.textColor = [UIColor lightGrayColor];
+    detailDefaultText.font = [UIFont fontWithName:@"Helvetica Neue" size:14.0];
+    detailDefaultText.textAlignment=NSTextAlignmentCenter;
+    [detail addSubview:detailDefaultText];
+    
+    UILabel *priceLabel = [[UILabel alloc]initWithFrame:CGRectMake(margin+.5*spacing,margin+7*spacing,formWidth-(2*margin +spacing), spacing)];
+    priceLabel.font = [UIFont fontWithName:@"Helvetica Neue" size:14.0];
+    priceLabel.text = @"What Bounty are you posting?";
+    priceLabel.textAlignment=NSTextAlignmentCenter;
+    [bountyFormView addSubview:priceLabel];
+ 
+    price = [[UITextView alloc] initWithFrame:CGRectMake(margin+.5*spacing,margin+8*spacing,formWidth-(2*margin+spacing),spacing)];
+    price.keyboardType= UIKeyboardTypeDecimalPad;
+    price.textAlignment=NSTextAlignmentCenter;
+    price.delegate = self;
+    [bountyFormView addSubview:price];
+    
+    priceDefaultText = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, formWidth-(2*margin + spacing), spacing)];
+    priceDefaultText.text = @"9.50";
+    priceDefaultText.textColor = [UIColor lightGrayColor];
+    priceDefaultText.font = [UIFont fontWithName:@"Helvetica Neue" size:14.0];
+    priceDefaultText.textAlignment=NSTextAlignmentCenter;
+    [price addSubview:priceDefaultText];
+    
+    UIImageView* bag = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"dollar_sign_19"]];
+    bag.frame=CGRectMake(margin+.5*spacing + 19 ,margin+8*spacing, 15, 15);
+    [bountyFormView addSubview:bag];
+    
     
 }
--(void)closeCreateNewBounty{
+
+
+-(void) closeCreateNewBounty{
     [bountyFormView removeFromSuperview];
     addBounty.enabled=true;
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void) changeBountyLocation{
+    
 }
-*/
+
+//UITextView Protocol methods
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    if(textView == detail)detailDefaultText.hidden = YES;
+    if(textView == price) priceDefaultText.hidden = YES;
+    if(textView == title)titleDefaultText.hidden = YES;
+}
+
+- (void)textViewDidChange:(UITextView *)textView
+{
+    if(textView == detail) detailDefaultText.hidden = ([textView.text length] > 0);
+    if(textView == price)priceDefaultText.hidden  = ([textView.text length] > 0 );
+    if(textView == title)titleDefaultText.hidden = ([textView.text length] > 0);
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    if(textView == detail) detailDefaultText.hidden = ([textView.text length] > 0);
+    if(textView == price)priceDefaultText.hidden  = ([textView.text length] > 0 );
+    if(textView == title)titleDefaultText.hidden = ([textView.text length] > 0);
+}
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    UITouch *touch = [[event allTouches] anyObject];
+    if ([price isFirstResponder] && [touch view] != price) {
+        [price resignFirstResponder];
+    }
+    if ([detail isFirstResponder] && [touch view] != detail) {
+        [detail resignFirstResponder];
+    }
+    if ([title isFirstResponder] && [touch view] != title) {
+        [title resignFirstResponder];
+    }
+
+    [super touchesBegan:touches withEvent:event];
+}
 
 @end

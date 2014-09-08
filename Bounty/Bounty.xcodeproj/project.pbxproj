@@ -32,6 +32,7 @@
 		EC1BF4A5199B21D6009BD2F4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC1BF4A4199B21D6009BD2F4 /* StoreKit.framework */; };
 		EC1BF4A7199B21E0009BD2F4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC1BF4A6199B21E0009BD2F4 /* SystemConfiguration.framework */; };
 		EC1BF4AA199C317A009BD2F4 /* R2Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1BF4A9199C317A009BD2F4 /* R2Connection.m */; };
+		EC4B5DC519BD6625009D83BC /* dollar_sign_19.png in Resources */ = {isa = PBXBuildFile; fileRef = EC4B5DC419BD6625009D83BC /* dollar_sign_19.png */; };
 		ECAEDF7F19B173B700A5221E /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAEDF7E19B173B700A5221E /* GoogleMaps.framework */; };
 		ECAEDF8119B176CE00A5221E /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ECAEDF8019B176CE00A5221E /* GoogleMaps.bundle */; };
 		ECAEDF8319B176E600A5221E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAEDF8219B176E600A5221E /* AVFoundation.framework */; };
@@ -90,6 +91,7 @@
 		EC1BF4A6199B21E0009BD2F4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		EC1BF4A8199C317A009BD2F4 /* R2Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = R2Connection.h; sourceTree = "<group>"; };
 		EC1BF4A9199C317A009BD2F4 /* R2Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = R2Connection.m; sourceTree = "<group>"; };
+		EC4B5DC419BD6625009D83BC /* dollar_sign_19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dollar_sign_19.png; sourceTree = "<group>"; };
 		ECAEDF7E19B173B700A5221E /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		ECAEDF8019B176CE00A5221E /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		ECAEDF8219B176E600A5221E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -222,6 +224,7 @@
 		EC1BF466199B2130009BD2F4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EC4B5DC419BD6625009D83BC /* dollar_sign_19.png */,
 				ECAEDF9619BD14B500A5221E /* money_bag_26.png */,
 				ECAEDF9419BD138100A5221E /* moneyBag.png */,
 				EC1BF467199B2130009BD2F4 /* Bounty-Info.plist */,
@@ -340,6 +343,7 @@
 				ECAEDF9519BD138100A5221E /* moneyBag.png in Resources */,
 				EC1BF46A199B2130009BD2F4 /* InfoPlist.strings in Resources */,
 				EC1BF473199B2130009BD2F4 /* Main.storyboard in Resources */,
+				EC4B5DC519BD6625009D83BC /* dollar_sign_19.png in Resources */,
 				ECAEDF8119B176CE00A5221E /* GoogleMaps.bundle in Resources */,
 				ECAEDF9719BD14B500A5221E /* money_bag_26.png in Resources */,
 			);
