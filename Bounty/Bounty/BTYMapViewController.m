@@ -29,6 +29,7 @@
     UIImagePickerController *imagePicker;
     UIImageView * selectedBountyImage;
     UIButton *bountyPicture;
+    NSMutableArray *locationPickerViews;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -232,21 +233,46 @@
 //This should present a map instructing the user to drop a pin at the desired location and confirm or canel
 //Should return control to the bountyFormView
 -(void) changeBountyLocation{
+    locationPickerViews = [[NSMutableArray alloc] init];
     float height=self.view.frame.size.height;
     float width=self.view.frame.size.width;
     bountyFormView.hidden = true;
     addBounty.hidden = true;
     
     UILabel* dropLocation = [[UILabel alloc] init];
-    dropLocation.frame = CGRectMake(150, 24.0,width-(150*2) , 28);
+    dropLocation.frame = CGRectMake(40, 24.0,width-80 , 28);
     dropLocation.text = @"Drop the location";
+    dropLocation.textAlignment= NSTextAlignmentCenter;
+    dropLocation.backgroundColor = [UIColor lightGrayColor];
     dropLocation.font = [UIFont fontWithName:@"Helvetica Neue" size:14.0];
     [self.view addSubview:dropLocation];
+    [locationPickerViews addObject:dropLocation];
     
+    UIButton *confirmLocation = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [confirmLocation addTarget:self action:@selector(confirmLocation) forControlEvents:UIControlEventTouchUpInside];
+    confirmLocation.enabled = false;
+    [confirmLocation setBackgroundColor:[UIColor lightGrayColor]];
+    confirmLocation.frame = CGRectMake(10, height-42, 32, 32);
+    [confirmLocation setImage:[UIImage imageNamed:@"ok"] forState:UIControlStateNormal];
+    [self.view addSubview:confirmLocation];
+    [locationPickerViews addObject:confirmLocation];
     
+    UIButton *revertLocation = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [revertLocation addTarget:self action:@selector(revertLocation) forControlEvents:UIControlEventTouchUpInside];
+    [revertLocation setBackgroundColor:[UIColor lightGrayColor]];
+    revertLocation.frame = CGRectMake(width-42, height-42, 32, 32);
+    [revertLocation setImage:[UIImage imageNamed:@"nope"] forState:UIControlStateNormal];
+    [self.view addSubview:revertLocation];
+    [locationPickerViews addObject:revertLocation];
     
 }
-
+-(void) revertLocation{
+    for (id view in locationPickerViews) {
+        [((UIView*)view) removeFromSuperview];
+    }
+    bountyFormView.hidden = false;
+    addBounty.hidden = false;
+}
 -(void) addBountyPicture{
     //Uses imagePicker to let user pick an image
     imagePicker = [[UIImagePickerController alloc] init];
@@ -321,4 +347,9 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
 }
 
+//MapView Protocol methods
+-(void)mapView:(GMSMapView *)mapView didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate{
+    
+    
+}
 @end

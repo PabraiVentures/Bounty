@@ -47,6 +47,8 @@
 		ECAEDF9519BD138100A5221E /* moneyBag.png in Resources */ = {isa = PBXBuildFile; fileRef = ECAEDF9419BD138100A5221E /* moneyBag.png */; };
 		ECAEDF9719BD14B500A5221E /* money_bag_26.png in Resources */ = {isa = PBXBuildFile; fileRef = ECAEDF9619BD14B500A5221E /* money_bag_26.png */; };
 		ECAEDF9A19BD15F800A5221E /* BTYMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAEDF9919BD15F800A5221E /* BTYMapViewController.m */; };
+		ECDC806119BEAB9300C11478 /* nope.png in Resources */ = {isa = PBXBuildFile; fileRef = ECDC805F19BEAB9300C11478 /* nope.png */; };
+		ECDC806219BEAB9300C11478 /* ok.png in Resources */ = {isa = PBXBuildFile; fileRef = ECDC806019BEAB9300C11478 /* ok.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +109,8 @@
 		ECAEDF9619BD14B500A5221E /* money_bag_26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = money_bag_26.png; sourceTree = "<group>"; };
 		ECAEDF9819BD15F800A5221E /* BTYMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTYMapViewController.h; sourceTree = "<group>"; };
 		ECAEDF9919BD15F800A5221E /* BTYMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTYMapViewController.m; sourceTree = "<group>"; };
+		ECDC805F19BEAB9300C11478 /* nope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nope.png; sourceTree = "<group>"; };
+		ECDC806019BEAB9300C11478 /* ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ok.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +228,8 @@
 		EC1BF466199B2130009BD2F4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				ECDC805F19BEAB9300C11478 /* nope.png */,
+				ECDC806019BEAB9300C11478 /* ok.png */,
 				EC4B5DC419BD6625009D83BC /* dollar_sign_19.png */,
 				ECAEDF9619BD14B500A5221E /* money_bag_26.png */,
 				ECAEDF9419BD138100A5221E /* moneyBag.png */,
@@ -344,6 +350,8 @@
 				EC1BF46A199B2130009BD2F4 /* InfoPlist.strings in Resources */,
 				EC1BF473199B2130009BD2F4 /* Main.storyboard in Resources */,
 				EC4B5DC519BD6625009D83BC /* dollar_sign_19.png in Resources */,
+				ECDC806219BEAB9300C11478 /* ok.png in Resources */,
+				ECDC806119BEAB9300C11478 /* nope.png in Resources */,
 				ECAEDF8119B176CE00A5221E /* GoogleMaps.bundle in Resources */,
 				ECAEDF9719BD14B500A5221E /* money_bag_26.png in Resources */,
 			);
