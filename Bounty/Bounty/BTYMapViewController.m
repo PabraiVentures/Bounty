@@ -25,6 +25,10 @@
     UITextView *price;
     UITextView *detail;
     UITextView *title;
+    
+    UIImagePickerController *imagePicker;
+    UIImageView * selectedBountyImage;
+    UIButton *bountyPicture;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -41,10 +45,16 @@
     // Do any additional setup after loading the view.
 
     [self initializeLocationManager];
+    [locationManager startUpdatingLocation];
+
 
 }
 - (void)viewDidAppear:(BOOL)animated{
-    [locationManager startUpdatingLocation];
+    
+    if (!locationManager) {
+        [self initializeLocationManager];
+        [locationManager startUpdatingLocation];
+    }
 
 }
 - (void)didReceiveMemoryWarning
@@ -113,12 +123,6 @@
     bountyFormView.alpha = .90;
     [mapView addSubview:bountyFormView];
     
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
-                                   initWithTarget:self
-                                   action:@selector(dismissKeyboard)];
-    [tap setCancelsTouchesInView:NO];
-    [bountyFormView addGestureRecognizer:tap];
-    
     /*UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [button addTarget:self
                action:@selector(closeCreateNewBounty)
@@ -138,11 +142,13 @@
     title = [[UITextView alloc] initWithFrame:CGRectMake(margin+.5*spacing, 0,formWidth-(2*margin + spacing),2*spacing)];
     title.font = [UIFont fontWithName:@"Helvetica Neue" size:22.0];
     title.textAlignment = NSTextAlignmentCenter;
+    title.delegate = self;
     [bountyFormView addSubview:title];
 
     titleDefaultText = [[UILabel alloc] initWithFrame:CGRectMake(margin+.5*spacing,0,formWidth-(2*margin + spacing),2*spacing)];
     titleDefaultText.text = @"Name your Bounty";
     titleDefaultText.font = [UIFont fontWithName:@"Helvetica Neue" size:22.0];
+    titleDefaultText.textColor = [UIColor lightGrayColor];
     [title addSubview:titleDefaultText];
 
     
@@ -195,6 +201,24 @@
     bag.frame=CGRectMake(margin+.5*spacing + 19 ,margin+8*spacing, 15, 15);
     [bountyFormView addSubview:bag];
     
+    bountyPicture = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [bountyPicture addTarget:self
+    action:@selector(addBountyPicture)
+    forControlEvents:UIControlEventTouchUpInside];
+    [bountyPicture setTitle:@"Bounty Picture" forState:UIControlStateNormal];
+    bountyPicture.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [bountyPicture setBackgroundColor: [UIColor whiteColor]];
+    bountyPicture.frame = CGRectMake(margin+.5*spacing,margin+9*spacing, formWidth-(2*margin+spacing), spacing*2);
+    [bountyFormView addSubview:bountyPicture];
+    
+    UIDatePicker* datepicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(margin+.5*spacing,margin+11*spacing, 0,0)];
+    datepicker.datePickerMode = UIDatePickerModeDate;
+    datepicker.minuteInterval = 5;
+    //datepicker.minimumDate = [NSDate dateWithTimeIntervalSinceNow:0];
+    datepicker.datePickerMode = UIDatePickerModeTime;
+    [datepicker addTarget:self action:@selector(bountyTimeChanged) forControlEvents:UIControlEventValueChanged];
+    [bountyFormView addSubview:datepicker];
+    
     
 }
 
@@ -204,10 +228,39 @@
     addBounty.enabled=true;
 }
 
+//Called when creating a bounty and the user wants to pick a custom location
+//This should present a map instructing the user to drop a pin at the desired location and confirm or canel
+//Should return control to the bountyFormView
 -(void) changeBountyLocation{
+    float height=self.view.frame.size.height;
+    float width=self.view.frame.size.width;
+    bountyFormView.hidden = true;
+    addBounty.hidden = true;
+    
+    UILabel* dropLocation = [[UILabel alloc] init];
+    dropLocation.frame = CGRectMake(150, 24.0,width-(150*2) , 28);
+    dropLocation.text = @"Drop the location";
+    dropLocation.font = [UIFont fontWithName:@"Helvetica Neue" size:14.0];
+    [self.view addSubview:dropLocation];
+    
+    
     
 }
 
+-(void) addBountyPicture{
+    //Uses imagePicker to let user pick an image
+    imagePicker = [[UIImagePickerController alloc] init];
+    
+    imagePicker.delegate = self;
+    
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+        imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+     else
+         imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:imagePicker animated:YES completion:NULL];
+    
+}
 //UITextView Protocol methods
 - (void)textViewDidBeginEditing:(UITextView *)textView
 {
@@ -243,6 +296,29 @@
     }
 
     [super touchesBegan:touches withEvent:event];
+}
+
+//UIImagePicker Protocol methods
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *) picker {
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
+}
+
+- (void)imagePickerController:(UIImagePickerController *) picker
+
+didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    selectedBountyImage.image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    [bountyPicture setImage:selectedBountyImage.image forState:UIControlStateNormal];
+    
+}
+
+//DateChanged
+-(void) bountyTimeChanged{
+    
 }
 
 @end

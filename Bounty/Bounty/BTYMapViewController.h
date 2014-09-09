@@ -10,7 +10,7 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import <Parse/Parse.h>
 
-@interface BTYMapViewController : UIViewController <CLLocationManagerDelegate, GMSMapViewDelegate, UITextViewDelegate,UITextFieldDelegate>
+@interface BTYMapViewController : UIViewController <CLLocationManagerDelegate, GMSMapViewDelegate, UITextViewDelegate,UITextFieldDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (strong,nonatomic) UITextField *priceField;
 -(void) loadMap;
 @end
